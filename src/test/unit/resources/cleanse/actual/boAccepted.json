@@ -1,0 +1,23 @@
+[
+  {
+    "originBestOfferId": "485741672325685",
+    "nwBestOfferId": "14708F68-1C15-4E4C-82AF-2A9E3C57478A",
+    "originAuctionId": "154208677253651",
+    "nwAuctionId": "13081DB2-27BA-4EDA-8660-A8F01DB48268",
+    "originVehicleId": "396108222558757",
+    "nwVehicleId": "965580A5-CC40-4C0C-AF43-7E5C712E0919",
+    "originSellerLoginId": "485319",
+    "nwSellerLoginId": "",
+    "sellerLoginName": "",
+    "dateAccepted": 1536066508862,
+    "systemUuid": "A69C04E3-01F7-4C79-A6E8-BB8BAF7ADC76",
+    "systemOrigin": "classic",
+    "systemWhenCreated": 1536066510614,
+    "systemTopic": "nw-auction",
+    "systemTopicKey": "965580A5-CC40-4C0C-AF43-7E5C712E0919",
+    "systemEvent": "bo_accepted",
+    "originTimestamp": 1536066508862,
+    "originCreatedBy": "",
+    "originModifiedBy": ""
+  }
+]

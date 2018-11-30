@@ -1,0 +1,77 @@
+[
+  {
+    "ACTUAL": ["Unknown"],
+    "EXPECTED": "exteriorColor:Unknown",
+    "SEARCH_NOTE": "Exterior Color should be Unknown"
+  },
+  {
+    "ACTUAL": ["Gold"],
+    "EXPECTED": "exteriorColor:Gold",
+    "SEARCH_NOTE": "Exterior Color should be Gold"
+  },
+  {
+    "ACTUAL": ["Gray","Grey"],
+    "EXPECTED": "exteriorColor:Gray",
+    "SEARCH_NOTE": "Exterior Color should be Gray"
+  },
+  {
+    "ACTUAL": ["White"],
+    "EXPECTED": "exteriorColor:White",
+    "SEARCH_NOTE": "Exterior Color should be White"
+  },
+  {
+    "ACTUAL": ["Silver"],
+    "EXPECTED": "exteriorColor:Silver",
+    "SEARCH_NOTE": "Exterior Color should be Silver"
+  },
+  {
+    "ACTUAL": ["Black"],
+    "EXPECTED": "exteriorColor:Black",
+    "SEARCH_NOTE": "Exterior Color should be Black"
+  },
+  {
+    "ACTUAL": ["Red"],
+    "EXPECTED": "exteriorColor:Red",
+    "SEARCH_NOTE": "Exterior Color should be Red"
+  },
+  {
+    "ACTUAL": ["Yellow"],
+    "EXPECTED": "exteriorColor:Yellow",
+    "SEARCH_NOTE": "Exterior Color should be Yellow"
+  },
+  {
+    "ACTUAL": ["Green"],
+    "EXPECTED": "exteriorColor:Green",
+    "SEARCH_NOTE": "Exterior Color should be Green"
+  },
+  {
+    "ACTUAL": ["Blue","Blu"],
+    "EXPECTED": "exteriorColor:Blue",
+    "SEARCH_NOTE": "Exterior Color should be Blue"
+  },
+  {
+    "ACTUAL": ["Purple"],
+    "EXPECTED": "exteriorColor:Purple",
+    "SEARCH_NOTE": "Exterior Color should be Purple"
+  },
+  {
+    "ACTUAL": ["Brown"],
+    "EXPECTED": "exteriorColor:Brown",
+    "SEARCH_NOTE": "Exterior Color should be Brown"
+  },
+  {
+    "ACTUAL": ["Beige/Tan","Beige-Tan","Beige","Tan"],
+    "EXPECTED": "exteriorColor:Beige/Tan",
+    "SEARCH_NOTE": "Exterior Color should be Beige/Tan"
+  },
+  {
+    "ACTUAL": ["Two-Tone"],
+    "EXPECTED": "exteriorColor:Two-Tone",
+    "SEARCH_NOTE": "Exterior Color should be Two-Tone"
+  },
+  {
+    "ACTUAL": ["Orange"],
+    "EXPECTED": "exteriorColor:Orange",
+    "SEARCH_NOTE": "Exterior Color should be Orange"
+  }
+]

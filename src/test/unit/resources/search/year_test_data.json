@@ -1,0 +1,12 @@
+[
+  {
+    "ACTUAL": ["1990","90", "18"],
+    "EXPECTED": "year:1990",
+    "SEARCH_NOTE": "Test valid year four digit"
+  },
+  {
+    "ACTUAL": ["2015-18","2015-2018","15-18"],
+    "EXPECTED": "year:2015-2018",
+    "SEARCH_NOTE": "Test valid year range"
+  }
+]

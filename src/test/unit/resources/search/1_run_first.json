@@ -1,0 +1,24 @@
+[
+  {
+    "ACTUAL": ["Camry", "camry"],
+    "EXPECTED": "model: Camry",
+    "SEARCH_NOTE": "Test the Model"
+  },
+  {
+    "ACTUAL": ["camri"],
+    "EXPECTED": "mmv: Camry",
+    "SEARCH_NOTE": "Test the Model Camry from mmv"
+  },
+
+  {
+    "ACTUAL": ["1990"],
+    "EXPECTED": "year: 1990",
+    "SEARCH_NOTE": "Test the Year 1990"
+  },
+  {
+    "ACTUAL": ["1"],
+    "EXPECTED": "year: 1990",
+    "SEARCH_NOTE": "Test the Year 1990"
+  }
+
+]

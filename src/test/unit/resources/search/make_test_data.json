@@ -1,0 +1,362 @@
+[
+  {
+    "ACTUAL": ["AM General"],
+    "EXPECTED": "make:AM General",
+    "SEARCH_NOTE": "Test for make AM General"
+  },
+  {
+    "ACTUAL": ["Acura"],
+    "EXPECTED": "make:Acura",
+    "SEARCH_NOTE": "Test for make Acura"
+  },
+  {
+    "ACTUAL": ["Alfa Romeo"],
+    "EXPECTED": "make:Alfa Romeo",
+    "SEARCH_NOTE": "Test for make Alfa Romeo"
+  },
+  {
+    "ACTUAL": ["American Motors (AMC)","AMC", "American Motors"],
+    "EXPECTED": "make:American Motors (AMC)",
+    "SEARCH_NOTE": "Test for make American Motors (AMC)"
+  },
+  {
+    "ACTUAL": ["Aston Martin","Astin Martin"],
+    "EXPECTED": "make:Aston Martin",
+    "SEARCH_NOTE": "Test for make Aston Martin"
+  },
+  {
+    "ACTUAL": ["Audi"],
+    "EXPECTED": "make:Audi",
+    "SEARCH_NOTE": "Test for make Audi"
+  },
+  {
+    "ACTUAL": ["BMW","Beemer","Beamer"],
+    "EXPECTED": "make:BMW",
+    "SEARCH_NOTE": "Test for make BMW"
+  },
+  {
+    "ACTUAL": ["Bentley"],
+    "EXPECTED": "make:Bentley",
+    "SEARCH_NOTE": "Test for make Bentley"
+  },
+  {
+    "ACTUAL": ["Buick"],
+    "EXPECTED": "make:Buick",
+    "SEARCH_NOTE": "Test for make Buick"
+  },
+  {
+    "ACTUAL": ["Cadillac","Caddy","Cadi"],
+    "EXPECTED": "make:Cadillac",
+    "SEARCH_NOTE": "Test for make Cadillac"
+  },
+  {
+    "ACTUAL": ["Chevrolet","Chevy", "CHEVROLET SILVERADO","CHEVROL","CHEV","CHEVROLET CRUZE","Chevro"],
+    "EXPECTED": "make:Chevrolet",
+    "SEARCH_NOTE": "Test for make Chevrolet"
+  },
+  {
+    "ACTUAL": ["Chrysler","Chrystler"],
+    "EXPECTED": "make:Chrysler",
+    "SEARCH_NOTE": "Test for make Chrysler"
+  },
+  {
+    "ACTUAL": ["Daewoo"],
+    "EXPECTED": "make:Daewoo",
+    "SEARCH_NOTE": "Test for make Daewoo"
+  },
+  {
+    "ACTUAL": ["Daihatsu"],
+    "EXPECTED": "make:Daihatsu",
+    "SEARCH_NOTE": "Test for make Daihatsu"
+  },
+  {
+    "ACTUAL": ["Datsun","Datson"],
+    "EXPECTED": "make:Datsun",
+    "SEARCH_NOTE": "Test for make Datsun"
+  },
+  {
+    "ACTUAL": ["Dodge","Dodge Truck","DODGETRUCK","Dodge Journey","Dodge Charger","Dodg"],
+    "EXPECTED": "make:Dodge",
+    "SEARCH_NOTE": "Test for make Dodge"
+  },
+  {
+    "ACTUAL": ["Eagle"],
+    "EXPECTED": "make:Eagle",
+    "SEARCH_NOTE": "Test for make Eagle"
+  },
+  {
+    "ACTUAL": ["FIAT"],
+    "EXPECTED": "make:FIAT",
+    "SEARCH_NOTE": "Test for make FIAT"
+  },
+  {
+    "ACTUAL": ["Ferrari"],
+    "EXPECTED": "make:Ferrari",
+    "SEARCH_NOTE": "Test for make Ferrari"
+  },
+  {
+    "ACTUAL": ["Fiat"],
+    "EXPECTED": "make:Fiat",
+    "SEARCH_NOTE": "Test for make Fiat"
+  },
+  {
+    "ACTUAL": ["Fisker"],
+    "EXPECTED": "make:Fisker",
+    "SEARCH_NOTE": "Test for make Fisker"
+  },
+  {
+    "ACTUAL": ["Ford"],
+    "EXPECTED": "make:Ford",
+    "SEARCH_NOTE": "Test for make Ford"
+  },
+  {
+    "ACTUAL": ["Freightliner"],
+    "EXPECTED": "make:Freightliner",
+    "SEARCH_NOTE": "Test for make Freightliner"
+  },
+  {
+    "ACTUAL": ["GMC","GMC TRUCKS","GMC Sierra","General Motors", "General Motors Corporation"],
+    "EXPECTED": "make:GMC",
+    "SEARCH_NOTE": "Test for make GMC"
+  },
+  {
+    "ACTUAL": ["Genesis"],
+    "EXPECTED": "make:Genesis",
+    "SEARCH_NOTE": "Test for make Genesis"
+  },
+  {
+    "ACTUAL": ["Geo"],
+    "EXPECTED": "make:Geo",
+    "SEARCH_NOTE": "Test for make Geo"
+  },
+  {
+    "ACTUAL": ["HUMMER"],
+    "EXPECTED": "make:HUMMER",
+    "SEARCH_NOTE": "Test for make HUMMER"
+  },
+  {
+    "ACTUAL": ["Honda"],
+    "EXPECTED": "make:Honda",
+    "SEARCH_NOTE": "Test for make Honda"
+  },
+  {
+    "ACTUAL": ["Hyundai","HYUNDAI TUCSON"],
+    "EXPECTED": "make:Hyundai",
+    "SEARCH_NOTE": "Test for make Hyundai"
+  },
+  {
+    "ACTUAL": ["INFINITI"],
+    "EXPECTED": "make:INFINITI",
+    "SEARCH_NOTE": "Test for make INFINITI"
+  },
+  {
+    "ACTUAL": ["Isuzu","Izuzu"],
+    "EXPECTED": "make:Isuzu",
+    "SEARCH_NOTE": "Test for make Isuzu"
+  },
+  {
+    "ACTUAL": ["Jaguar","Jag"],
+    "EXPECTED": "make:Jaguar",
+    "SEARCH_NOTE": "Test for make Jaguar"
+  },
+  {
+    "ACTUAL": ["Jeep"],
+    "EXPECTED": "make:Jeep",
+    "SEARCH_NOTE": "Test for make Jeep"
+  },
+  {
+    "ACTUAL": ["Karma"],
+    "EXPECTED": "make:Karma",
+    "SEARCH_NOTE": "Test for make Karma"
+  },
+  {
+    "ACTUAL": ["Kia","Kia Rondo"],
+    "EXPECTED": "make:Kia",
+    "SEARCH_NOTE": "Test for make Kia"
+  },
+  {
+    "ACTUAL": ["Lamborghini","Lamborgini"],
+    "EXPECTED": "make:Lamborghini",
+    "SEARCH_NOTE": "Test for make Lamborghini"
+  },
+  {
+    "ACTUAL": ["Land Rover","Landrover"],
+    "EXPECTED": "make:Land Rover",
+    "SEARCH_NOTE": "Test for make Land Rover"
+  },
+  {
+    "ACTUAL": ["Lexus","Lexis"],
+    "EXPECTED": "make:Lexus",
+    "SEARCH_NOTE": "Test for make Lexus"
+  },
+  {
+    "ACTUAL": ["Lincoln","Lincoln Navigator"],
+    "EXPECTED": "make:Lincoln",
+    "SEARCH_NOTE": "Test for make Lincoln"
+  },
+  {
+    "ACTUAL": ["Lotus"],
+    "EXPECTED": "make:Lotus",
+    "SEARCH_NOTE": "Test for make Lotus"
+  },
+  {
+    "ACTUAL": ["MINI"],
+    "EXPECTED": "make:MINI",
+    "SEARCH_NOTE": "Test for make MINI"
+  },
+  {
+    "ACTUAL": ["Maserati"],
+    "EXPECTED": "make:Maserati",
+    "SEARCH_NOTE": "Test for make Maserati"
+  },
+  {
+    "ACTUAL": ["Maybach"],
+    "EXPECTED": "make:Maybach",
+    "SEARCH_NOTE": "Test for make Maybach"
+  },
+  {
+    "ACTUAL": ["Mazda"],
+    "EXPECTED": "make:Mazda",
+    "SEARCH_NOTE": "Test for make Mazda"
+  },
+  {
+    "ACTUAL": ["McLaren","Maclaren","McLaran"],
+    "EXPECTED": "make:McLaren",
+    "SEARCH_NOTE": "Test for make McLaren"
+  },
+  {
+    "ACTUAL": ["Mercedes-Benz","Benz","MB","Mercedes","Mercedes","MERECEDES"],
+    "EXPECTED": "make:Mercedes-Benz",
+    "SEARCH_NOTE": "Test for make Mercedes-Benz"
+  },
+  {
+    "ACTUAL": ["Mercury"],
+    "EXPECTED": "make:Mercury",
+    "SEARCH_NOTE": "Test for make Mercury"
+  },
+  {
+    "ACTUAL": ["Merkur","Merker"],
+    "EXPECTED": "make:Merkur",
+    "SEARCH_NOTE": "Test for make Merkur"
+  },
+  {
+    "ACTUAL": ["Mitsubishi","MITSUBISHI FUSO"],
+    "EXPECTED": "make:Mitsubishi",
+    "SEARCH_NOTE": "Test for make Mitsubishi"
+  },
+  {
+    "ACTUAL": ["Nissan","Nissan Rogue"],
+    "EXPECTED": "make:Nissan",
+    "SEARCH_NOTE": "Test for make Nissan"
+  },
+  {
+    "ACTUAL": ["Oldsmobile","Oldzmobile"],
+    "EXPECTED": "make:Oldsmobile",
+    "SEARCH_NOTE": "Test for make Oldsmobile"
+  },
+  {
+    "ACTUAL": ["Panoz"],
+    "EXPECTED": "make:Panoz",
+    "SEARCH_NOTE": "Test for make Panoz"
+  },
+  {
+    "ACTUAL": ["Peugeot","Peugot"],
+    "EXPECTED": "make:Peugeot",
+    "SEARCH_NOTE": "Test for make Peugeot"
+  },
+  {
+    "ACTUAL": ["Plymouth"],
+    "EXPECTED": "make:Plymouth",
+    "SEARCH_NOTE": "Test for make Plymouth"
+  },
+  {
+    "ACTUAL": ["Pontiac"],
+    "EXPECTED": "make:Pontiac",
+    "SEARCH_NOTE": "Test for make Pontiac"
+  },
+  {
+    "ACTUAL": ["Porsche","Porsh","Porsch"],
+    "EXPECTED": "make:Porsche",
+    "SEARCH_NOTE": "Test for make Porsche"
+  },
+  {
+    "ACTUAL": ["Ram","RAM 3500 C/C"],
+    "EXPECTED": "make:Ram",
+    "SEARCH_NOTE": "Test for make Ram"
+  },
+  {
+    "ACTUAL": ["Renault","Renalt"],
+    "EXPECTED": "make:Renault",
+    "SEARCH_NOTE": "Test for make Renault"
+  },
+  {
+    "ACTUAL": ["Rolls-Royce","Rolls"],
+    "EXPECTED": "make:Rolls-Royce",
+    "SEARCH_NOTE": "Test for make Rolls-Royce"
+  },
+  {
+    "ACTUAL": ["Saab","Sab"],
+    "EXPECTED": "make:Saab",
+    "SEARCH_NOTE": "Test for make Saab"
+  },
+  {
+    "ACTUAL": ["Saturn"],
+    "EXPECTED": "make:Saturn",
+    "SEARCH_NOTE": "Test for make Saturn"
+  },
+  {
+    "ACTUAL": ["Scion"],
+    "EXPECTED": "make:Scion",
+    "SEARCH_NOTE": "Test for make Scion"
+  },
+  {
+    "ACTUAL": ["Spyker","Spiker"],
+    "EXPECTED": "make:Spyker",
+    "SEARCH_NOTE": "Test for make Spyker"
+  },
+  {
+    "ACTUAL": ["Sterling","STERLING TRUCK"],
+    "EXPECTED": "make:Sterling",
+    "SEARCH_NOTE": "Test for make Sterling"
+  },
+  {
+    "ACTUAL": ["Subaru","Subaru Forester","Subaru Legacy"],
+    "EXPECTED": "make:Subaru",
+    "SEARCH_NOTE": "Test for make Subaru"
+  },
+  {
+    "ACTUAL": ["Suzuki"],
+    "EXPECTED": "make:Suzuki",
+    "SEARCH_NOTE": "Test for make Suzuki"
+  },
+  {
+    "ACTUAL": ["Tesla","Tesla Model"],
+    "EXPECTED": "make:Tesla",
+    "SEARCH_NOTE": "Test for make Tesla"
+  },
+  {
+    "ACTUAL": ["Toyota","To","Toyota Sienna"],
+    "EXPECTED": "make:Toyota",
+    "SEARCH_NOTE": "Test for make Toyota"
+  },
+  {
+    "ACTUAL": ["Volkswagen","VW","Volkswagen Beetle"],
+    "EXPECTED": "make:Volkswagen",
+    "SEARCH_NOTE": "Test for make Volkswagen"
+  },
+  {
+    "ACTUAL": ["Volvo"],
+    "EXPECTED": "make:Volvo",
+    "SEARCH_NOTE": "Test for make Volvo"
+  },
+  {
+    "ACTUAL": ["Yugo"],
+    "EXPECTED": "make:Yugo",
+    "SEARCH_NOTE": "Test for make Yugo"
+  },
+  {
+    "ACTUAL": ["smart"],
+    "EXPECTED": "make:smart",
+    "SEARCH_NOTE": "Test for make smart"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "ACTUAL":[
+      "Ferarri 488 GTB"
+    ],
+    "EXPECTED": [
+      "make: Ferrari,model: 488,trim: GTB"
+    ],
+    "SEARCH_NOTE":"Aston Martin DB11"
+  },
+  {
+    "ACTUAL":[
+      "Austin Martin DB11"
+    ],
+    "EXPECTED": [
+      "make: Aston Martin,model: DB11"
+    ],
+    "SEARCH_NOTE":"Aston Martin DB11"
+  },
+  {
+    "ACTUAL":[
+      "18 Chevy Impala 50k"
+    ],
+    "EXPECTED": [
+      "make: Chevrolet,model: Impala,year: 2018,odometer: 50000"
+    ],
+    "SEARCH_NOTE":"Test for YEAR MAKE MODEL"
+  }
+,
+  {
+    "ACTUAL":[
+      "Chevy"
+    ],
+    "EXPECTED": [
+      "make: Chevrolet,model: Impala,year: 2018,odometer: 50000"
+    ],
+    "SEARCH_NOTE":"Test for YEAR MAKE MODEL"
+  },
+  {
+    "ACTUAL":[
+      "camri"
+    ],
+    "EXPECTED": [
+      "make: Chevrolet,model: Impala,year: 2018,odometer: 50000"
+    ],
+    "SEARCH_NOTE":"Test for YEAR MAKE MODEL"
+  }
+]
+
+
+
+

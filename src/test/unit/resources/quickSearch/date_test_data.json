@@ -1,0 +1,27 @@
+[
+  {
+    "ACTUAL": ["10-15-2009"],
+    "EXPECTED": "date: 10-15-2009",
+    "SEARCH_NOTE": "Test valid date"
+  },
+  {
+    "ACTUAL": ["10/15/2009"],
+    "EXPECTED": "date: 10/15/2009",
+    "SEARCH_NOTE": "Test valid date"
+  },
+  {
+    "ACTUAL": ["10.15.2009"],
+    "EXPECTED": "date: 10.15.2009",
+    "SEARCH_NOTE": "Test valid date"
+  },
+  {
+    "ACTUAL": ["2009-10-15"],
+    "EXPECTED": "date: 10.15.2009",
+    "SEARCH_NOTE": "Test valid date"
+  },
+  {
+    "ACTUAL": ["1/1/09"],
+    "EXPECTED": "date: 01/01/2009",
+    "SEARCH_NOTE": "Test valid date"
+  }
+]

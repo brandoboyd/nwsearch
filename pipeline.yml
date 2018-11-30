@@ -1,0 +1,8 @@
+---
+UnitTest: true
+IntegrationTest: false
+Nexus: false
+Notification:
+  - SlackPass: "toronto-pipeline-pass"
+  - SlackFail: "toronto-pipeline-fail"
+  - Email: nw-devops@adesa.com

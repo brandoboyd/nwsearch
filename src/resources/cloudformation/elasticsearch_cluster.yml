@@ -1,0 +1,189 @@
+# We should be using yml for CF
+# We're placing it in the project level just because we do NOT have a defined way of managing all CF
+# Ideally DevOps would need to own this and part of the aws_infra artifacts
+# CC'ing DevOps
+
+# TODO: we need to leverage params for configs
+# At this point everything is hard-coded
+
+# CAVEAT: in the account you run this in you need to create a servicelinkedrole
+# example: aws iam create-service-linked-role --aws-service-name es.amazonaws.com --profile preprod
+
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Create the ES cluster for nw-search team'
+Parameters:
+  DomainName:
+    Description: User defined Elasticsearch Domain name
+    Type: String
+  ElasticsearchVersion:
+    Description: User defined Elasticsearch Version
+    Type: String
+    Default: '6.2'
+  InstanceType:
+    Description: ES instance type
+    Type: String
+    Default: t2.small.elasticsearch
+    AllowedValues:
+    - t2.small.elasticsearch # testing purposes
+    - m4.large.elasticsearch
+    - m4.xlarge.elasticsearch
+    - m4.2xlarge.elasticsearch
+    - m4.4xlarge.elasticsearch
+    - m4.10xlarge.elasticsearch
+    ConstraintDescription: must be a valid ES instance type.
+  InstanceCount:
+    Description: ES instance count
+    Type: String
+    Default: '2'
+    ConstraintDescription: must be a valid ES instance type.
+  Env:
+    Type: String
+    AllowedValues:
+    - "testdev"
+    - "qa"
+    - "perf"
+    - "uat"
+    - "preprod"
+    - "prod"
+  NeedExtAccess:
+    Type: String
+    AllowedValues:
+    - "true"
+    - "false"
+    Default: "false"
+
+Mappings:
+   VPCMap:
+    perf:
+      BaseVpc: "vpc-fe1d9987"
+      BaseVpcCidr: "10.196.20.0/22"
+      SubnetA: "subnet-c80f7d80"
+      SubnetB: "subnet-ab3684f1"
+      SubnetC: "subnet-eb0f1e8e"
+      LambdaSG: "sg-ee0ab29f"
+      IamRole: "nw-search-lambda-role"
+      EbsVolSize: 10
+      AcctNo: "941794040565"
+    preprod:
+      BaseVpc: "vpc-863bcbee"
+      BaseVpcCidr: "10.196.208.0/20"
+      SubnetA: "subnet-2845bf40"
+      SubnetB: "subnet-433d0438"
+      SubnetC: "subnet-b46917f9"
+      LambdaSG: "sg-cb9da9a3"
+      IamRole: "nw-search-lambda-role"
+      EbsVolSize: 10
+    qa:
+      BaseVpc: "vpc-a1d24fc8"
+      BaseVpcCidr: "10.196.24.0/22"
+      SubnetA: "subnet-c84525a1"
+      SubnetB: "subnet-5211b829"
+      SubnetC: "subnet-85966cc8"
+      LambdaSG: "sg-ffffda96"
+      IamRole: "nw-search-lambda-role"
+      EbsVolSize: 10
+    uat:
+      BaseVpc: "vpc-dc8be8b5"
+      BaseVpcCidr: "10.196.28.0/24"
+      SubnetA: "subnet-7c5b2a15"
+      SubnetB: "subnet-602a951b"
+      LambdaSG: "sg-dce0d2b5"
+      IamRole: "nw-search-lambda-role"
+      EbsVolSize: 10
+    prod:
+      BaseVpc: "vpc-12610d7b"
+      BaseVpcCidr: "10.196.20.0/22"
+      SubnetA: "subnet-141a687d"
+      SubnetB: "subnet-f5a31b8e"
+      SubnetC: "subnet-ee29e0a3"
+      LambdaSG: "sg-2a192743"
+      IamRole: "nw-search-lambda-role"
+      EbsVolSize: 50
+Conditions:
+  NeedExtAccess:
+    !Equals [!Ref NeedExtAccess, "true"]
+
+Resources:
+  nwSearchSg:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "Allow 9200/443 from NWSearch Lambda SG"
+      VpcId: !FindInMap [ VPCMap, !Ref Env, BaseVpc ]
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: "9200"
+        ToPort: "9300"
+        # SourceSecurityGroupId: !FindInMap [ VPCMap, !Ref Env, LambdaSG ]
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: "443"
+        ToPort: "443"
+        # SourceSecurityGroupId: !FindInMap [ VPCMap, !Ref Env, LambdaSG ]
+        CidrIp: 0.0.0.0/0
+      Tags:
+        - "Key": "Name"
+          "Value": !Sub ${Env}-nw-search-es-sg
+        - "Key": Environment
+          "Value": !Sub ${Env}
+   
+  ElasticsearchDomain:
+    Type: AWS::Elasticsearch::Domain
+    Properties:
+      DomainName: !Sub nw-search-${env}
+      VPCOptions:
+        SecurityGroupIds: 
+          - !Ref nwSearchSg
+        SubnetIds: 
+          - !FindInMap [ VPCMap, !Ref Env, SubnetA ]
+          - !FindInMap [ VPCMap, !Ref Env, SubnetB ]
+      DomainName:
+        !Ref DomainName
+      ElasticsearchVersion:
+        !Ref ElasticsearchVersion
+      ElasticsearchClusterConfig:
+        DedicatedMasterEnabled: 'true'
+        InstanceCount:
+          !Ref InstanceCount
+        ZoneAwarenessEnabled: 'true'
+        InstanceType:
+          !Ref InstanceType
+      EBSOptions:
+        EBSEnabled: true
+        Iops: 0
+        VolumeSize: !FindInMap [ VPCMap, !Ref Env, EbsVolSize ]
+        VolumeType: gp2
+      SnapshotOptions:
+        AutomatedSnapshotStartHour: '0'
+      AccessPolicies:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: '*'
+            Action: 'es:*'
+            Resource: !Join
+                        - ''
+                        - - 'arn:aws:es:'
+                          - !Ref 'AWS::Region'
+                          - ':'
+                          - !Ref 'AWS::AccountId'
+                          - ':domain/nw-search-'
+                          - !Ref Env
+                          - '/*'
+      AdvancedOptions:
+        rest.action.multi.allow_explicit_index: 'true'
+      Tags:
+        - "Key": "Name"
+          "Value": !Sub ${Env}-nw-search-es
+        - "Key": Environment
+          "Value": !Sub ${Env}
+
+Outputs:
+  DomainArn:
+    Value: !GetAtt ElasticsearchDomain.DomainArn
+  DomainEndpoint:
+    Value: !GetAtt ElasticsearchDomain.DomainEndpoint
+#  SecurityGroupId:
+#    Value: !Ref mySecurityGroup
+#  SubnetId:
+#    Value: !Ref subnet

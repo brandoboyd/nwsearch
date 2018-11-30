@@ -1,0 +1,186 @@
+[
+  {
+    "ACTUAL":[
+      "Chevrolet 1 Ton Chassis-Cabs"
+    ],
+    "EXPECTED": [
+      "make: Ferrari,model: 488,trim: GTB"
+    ],
+    "SEARCH_NOTE":"Aston Martin DB11"
+  },
+  {
+    "ACTUAL":[
+      "Ferarri 488 GTB"
+    ],
+    "EXPECTED": [
+      "make: Ferrari,model: 488,trim: GTB"
+    ],
+    "SEARCH_NOTE":"Aston Martin DB11"
+  },
+  {
+    "ACTUAL":[
+      "Austin Martin DB11"
+    ],
+    "EXPECTED": [
+      "make: Aston Martin,model: DB11"
+    ],
+    "SEARCH_NOTE":"Aston Martin DB11"
+  },
+  {
+    "ACTUAL":[
+      "Farari 456M"
+    ],
+    "EXPECTED": [
+      "make: Ferrari,model: 456M"
+    ],
+    "SEARCH_NOTE":"Farari 456M"
+  },
+  {
+    "ACTUAL":[
+      "Beemer3 Series"
+    ],
+    "EXPECTED": [
+      "make: BMW,model: 3"
+    ],
+    "SEARCH_NOTE":"Beemer3 Series"
+  },
+  {
+    "ACTUAL":[
+      "BimmerX6 M"
+    ],
+    "EXPECTED": [
+      "make: BMW,model: X6,trim: M"
+    ],
+    "SEARCH_NOTE":"BimmerX6 M"
+  },
+  {
+    "ACTUAL":[
+      "Alpha Romeo"
+    ],
+    "EXPECTED": [
+      "make: Alpha Romeo"
+    ],
+    "SEARCH_NOTE":"Alpha Romeo"
+  },
+  {
+    "ACTUAL":[
+      "Farari 02 456M"
+    ],
+    "EXPECTED": [
+      "make: Ferrari,model: 02,trim: 456M"
+    ],
+    "SEARCH_NOTE":"Farari 02 456M"
+  },
+  {
+    "ACTUAL":[
+      "Chevy 81 Citation"
+    ],
+    "EXPECTED": [
+      "make: Chevrolet,model: 31,trim: citation"
+    ],
+    "SEARCH_NOTE":"Chevy 81 Citation "
+  },
+  {
+    "ACTUAL":[
+      "Benz SLK-Class"
+    ],
+    "EXPECTED": [
+      "make: Mercedez Benz,model: SLK"
+    ],
+    "SEARCH_NOTE":"BenzSLK-Class"
+  },
+  {
+    "ACTUAL":[
+      "AM Eagle 30 4WD"
+    ],
+    "EXPECTED": [
+      "make: AM Eagle,model: 30,trim: 4WD"
+    ],
+    "SEARCH_NOTE":"AM Eagle 30 4WD"
+  },
+  {
+    "ACTUAL":[
+      "Boxster Porshe "
+    ],
+    "EXPECTED": [
+      "make: Porshe,model: Boxster"
+    ],
+    "SEARCH_NOTE":"Porsche Boxster"
+  },
+  {
+    "ACTUAL":[
+      "Hurricane Lamborgini"
+    ],
+    "EXPECTED": [
+      "make: Lamborgini,model: Hurricane"
+    ],
+    "SEARCH_NOTE":"Lamborgini Hurricane"
+  },
+  {
+    "ACTUAL":[
+      "Maxima Nisan "
+    ],
+    "EXPECTED": [
+      "make: Nissan,model: Maxima"
+    ],
+    "SEARCH_NOTE":"Nissan Maxima"
+  },
+  {
+    "ACTUAL":[
+      "360 Farari"
+    ],
+    "EXPECTED": [
+      "make: ferrari,model: 360"
+    ],
+    "SEARCH_NOTE":"Ferrari 360"
+  },
+  {
+    "ACTUAL":[
+      "X5 Series Beemer"
+    ],
+    "EXPECTED": [
+      "make: BMW,model: X5"
+    ],
+    "SEARCH_NOTE":"BMW X5 Series"
+  },
+  {
+    "ACTUAL":[
+      "Impala Police/Taxi Pkgs Chevy"
+    ],
+    "EXPECTED": [
+      "make: Chevrolet,model: Impala,trim: Police/Taxi Pkgs"
+    ],
+    "SEARCH_NOTE":"Chevy Impala Police/Taxi Pkgs"
+  },
+  {
+    "ACTUAL":[
+      "Super Duty F-550 DRW Ford"
+    ],
+    "EXPECTED": [
+      "make: Ford,model: F-550 DRW,trim: Super Duty"
+    ],
+    "SEARCH_NOTE":"make: Ford,model: F-550 DRW,trim: Super Duty"
+  },
+  {
+    "ACTUAL":[
+      "Vanagon/Campmobile VW"
+    ],
+    "EXPECTED": [
+      "make: VW,model: Vanagon/Campmobile"
+    ],
+    "SEARCH_NOTE":"VW Vanagon/Campmobile"
+  },
+  {
+    "ACTUAL":[
+      "18 Chevy Impala 50k"
+    ],
+    "EXPECTED": [
+      "make: Chevrolet,model: Impala,year: 2018,odometer: 50000"
+    ],
+    "SEARCH_NOTE":"Test for YEAR MAKE MODEL"
+  }
+]
+
+
+
+

@@ -1,0 +1,34 @@
+{
+	"nwsearchlbindex": {
+		"settings" : {
+			"number_of_shards" : 3,
+			"number_of_replicas" : 2
+		},
+		"mappings": {
+			"nwsearchlbtype": {
+				"properties": {
+					"nwLiveblockEventId": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+
+					"originLiveblockEventId": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+}

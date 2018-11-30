@@ -1,0 +1,40 @@
+### IMPORTANT ###
+# THIS FILE CONTAINS BOTH BUILDTIME AD RUNTIME PROPERTIES FOR THE MICROSERVICE
+# THEY GENERALLY CONFIGURED IN SUCH A WAY THAT IT WORKS WITH LOCAL DEVELOPMENT OR DEVELOPER ACCOUNT, IE: TEST/TESTDEV/DEVELOPER STAGE
+#
+# IN ORDER FOR THEM TO WORK WITH PRODUCTION AND OTHER ENVIRONMENTS OUTSIDE OF DEVELOPMENT, IT IS IMPORTANT TO CONSULT WITH DEVOPS
+# TEAM BEFORE MAKING THESE FOLLOWING CHANGES
+# * DEFAULT VALUES
+# * RENAME OF PROPERTY
+# * ADDITION OF PROPERTY
+# * REMOVAL OF PROPERTY
+#
+# WITHOUT PROPER CONSULTATION WITH DEVOPS COULD RESULT IN FAILURE TO DEPLOY TO PRODUCTION AND ERROR DURING RUNTIME
+#
+
+#Serverless
+stage: local
+####
+# the following is account-specific and is shared across multiple microservices
+# do not put it into the microservice-specific properties_{env}.yml file in the pipeline configuration
+# put it instead into github.nw.adesa.com:new-wave/nw-pipeline-deploy.git/projects/nw-serverless-api/account_{acc}.yml
+aws-lambda-role: "arn:aws:iam::854045450972:role/nw-watchlist-lambda"
+aws-lambda-sg: "sg-64fdfe16"
+aws-lambda-subnet1: "subnet-2779c16c"
+aws-lambda-subnet2: "subnet-828678ad"
+aws-region: "us-east-1"
+
+# other custom definitions
+custom-token-authorizer: "arn:aws:lambda:us-east-1:854045450972:function:nwIAM-testdev-authorize"
+custom-iam-authorizer: "aws_iam"
+####
+
+kinesis-stream: "arn:aws:kinesis:us-east-1:854045450972:stream/nw-deprotobuf-testdev"
+elastic-search-url: "https://vpc-nw-search-es-testdev-zzqv46juk4x2xk62d4u4i5vl7m.us-east-1.es.amazonaws.com"
+elastic-search-index: "nwsearchindex"
+elastic-search-type: "nwsearchtype"
+live-block-index: "nwsearchlbindex"
+live-block-type: "nwsearchlbtype"
+information-log: "ON"
+s3-bucket-name: "nwsearch-testdev-essoldvehicles"
+s3-file-name: "vehiclesold_"

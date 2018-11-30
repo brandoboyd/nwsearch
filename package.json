@@ -1,0 +1,109 @@
+{
+  "name": "nw-search",
+  "version": "0.0.1",
+  "description": "Search",
+  "main": "lib/handler.js",
+  "typings": "lib/handler.d.ts",
+  "publishConfig": {
+    "registry": "http://nexus.nw.adesa.com/repository/npm-hosted/"
+  },
+  "scripts": {
+    "start": "serverless webpack serve -p 8801 --stage local",
+    "test": "mocha --compilers ts:ts-node/register src/test/unit/main/**/*.spec.ts --reporter mocha-junit-reporter --reporter-options mochaFile=./build/TEST-service.xml",
+    "dev:test:unit": "mocha --compilers ts:ts-node/register src/test/unit/main/**/*.spec.ts",
+    "predev:test:bdd": "npm run localstack:all:up && npm run dev:flyway:migrate",
+    "dev:test:bdd": "npm run dev:test:run-bdd",
+    "dev:test:run-bdd": "cucumberjs ./src/test/integration/feature/ --require ./src/test/integration/feature/step_definitions --compiler ts:ts-node/register",
+    "postdev:test:bdd": "npm run localstack:all:down",
+    "dev:test:bdd:debug": "node $NODE_DEBUG_OPTION ./node_modules/.bin/cucumberjs ./src/test/integration/feature --require ./src/test/integration/feature/step_definitions --compiler ts:ts-node/register",
+    "coverage": "nyc --cache=false npm t",
+    "coverage:bdd": "nyc --cache=false -x src/test/ -x src/main/typescript/repo -x src/main/typescript/dto -x src/main/typescript/domain -x src/main/typescript/handler.ts -x src/main/typescript/web -x src/main/typescript/stream -x src/main/typescript/service/config-loader-service.ts -x src/main/typescript/service/config-executor-service.ts -x src/main/typescript/facade/event-processor-facade.ts  --lines 80 --branches 80 --functions 80 --statements 80 -r json -r html -r text npm run dev:test:bdd",
+    "predev:listen:stream": "npm run localstack:all:up && npm run localstack:kinesis:create:topic",
+    "dev:listen:stream": "concurrently \"npm run dev:relay:stream\"",
+    "dev:relay:stream": "serverless stream listen -f putIndex -t nw-local --stage local",
+    "postdev:listen:stream": "npm run localstack:all:down",
+    "build:webpack": "rimraf ./lib && serverless webpack --out lib -d",
+    "build:tsc": "rimraf ./lib && tsc",
+    "dev:lint": "tslint src/**/*.ts -e /node_modules/**/*.ts --fix",
+    "dev:install": "npm install && npm install --only=dev",
+    "localstack:wait": "echo 'Waiting for LocalStack to be ready (by sleeping for 10 secs). Fix next sprint' && sleep 10",
+    "localstack:all:up": "concurrently \"localstack kinesis up\" \"localstack elasticsearch up\" && npm run localstack:wait",
+    "localstack:all:down": "concurrently \"localstack elasticsearch down\" \"localstack kinesis down\"",
+    "localstack:kinesis:create:topic": "localstack kinesis topic create --name nw-local",
+    "elasticdump": "elasticdump"
+  },
+  "dependencies": {
+    "@nw/serverless-stream-plugin": "0.x",
+    "@nw/serverless-webpack": "^2.0.1",
+    "@types/aws-lambda": "0.x",
+    "@types/node": "^7.0.18",
+    "async-foreach": "^0.1.3",
+    "aws-sdk": "^2.205.0",
+    "bodybuilder": "2.2.15",
+    "elasticsearch": "14.2.1",
+    "http-aws-es": "^4.0.0",
+    "node-run-cmd": "^1.0.1",
+    "path": "^0.12.7",
+    "reflect-metadata": "0.x",
+    "source-map-support": "0.x",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "@nw/localstack": "0.x",
+    "awesome-typescript-loader": "^3.1.2",
+    "chai": "^4.0.2",
+    "concurrently": "^3.4.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "elasticdump": "3.x",
+    "mocha": "^3.2.0",
+    "mocha-junit-reporter": "^1.13.0",
+    "nyc": "^11.0.2",
+    "rimraf": "^2.5.4",
+    "serverless": "1.17.0",
+    "sinon": "^2.2.0",
+    "source-map-loader": "0.x",
+    "string-replace-loader": "^1.0.5",
+    "ts-node": "^3.0.4",
+    "tslint": "^5.10.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.4.1",
+    "webpack": "^3.2.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "nyc": {
+    "lines": 80,
+    "statements": 80,
+    "functions": 80,
+    "branches": 80,
+    "include": [
+      "src/main/**/*.ts"
+    ],
+    "exclude": [
+      "typings",
+      "src/test/*",
+      "src/main/mock-data",
+      "src/main/typescript/builder/ISearchQueryBuilder.ts",
+      "src/main/typescript/_adddata.ts",
+      "src/main/typescript/_coldata.ts",
+      "src/main/typescript/_engine.ts",
+      "src/main/typescript/_mmdata.ts",
+      "src/main/typescript/_sellers.ts",
+      "src/main/typescript/put-elastic-search-index.ts",
+      "src/main/typescript/delete-elastic-search-index.ts",
+      "src/main/typescript/search-elastic-search-index.ts",
+      "src/main/typescript/secure-search-elastic-search-index.ts",
+      "src/main/typescript/handler.ts",
+      "src/main/typescript/Auto-complete/autoCorrect.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "json",
+      "html",
+      "text"
+    ],
+    "all": true,
+    "check-coverage": true
+  }
+}

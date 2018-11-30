@@ -1,0 +1,11 @@
+[
+  {
+    "ACTUAL":[
+      "acura sentra 2017 Accord ls toyota Civic honda maxima"
+    ],
+    "EXPECTED": [
+      "make: Honda,model: Accord"
+    ],
+    "SEARCH_NOTE":"Nissan Maxima"
+  }
+]

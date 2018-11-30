@@ -1,0 +1,7 @@
+[
+  {
+    "ACTUAL": ["47933"],
+    "EXPECTED": "zip: 47933",
+    "SEARCH_NOTE": "Test valid zipcode"
+  }
+]

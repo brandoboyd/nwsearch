@@ -1,0 +1,10 @@
+[
+  {
+    "ACTUAL":[
+      "make: honda,model: accord, trim "
+    ],
+    "EXPECTED": [
+      "make: Honda,model: Accord"
+    ]
+  }
+]

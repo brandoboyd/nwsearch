@@ -1,0 +1,7 @@
+[
+  {
+    "ACTUAL": ["Acura CL Base 2016"],
+    "EXPECTED": "make: acura,model: cl,trim: base,year: 2016",
+    "SEARCH_NOTE": "Test for model 1 Series"
+  }
+]

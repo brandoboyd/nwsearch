@@ -1,0 +1,58 @@
+[
+    {
+      "ACTUAL":[
+        "honda civic 18"
+      ],
+      "EXPECTED": [
+        {"make": "honda","model": "civic","year": "2018"}
+      ],
+      "SEARCH_NOTE":""
+    },
+    {
+      "ACTUAL":[
+        "honda civic 18 4wd"
+      ],
+      "EXPECTED": [
+        {"make": "honda","model": "civic","year": "2018","drivetrain": "4wd"}
+      ],
+      "SEARCH_NOTE":""
+    },
+    {
+      "ACTUAL":[
+        "18 Caddy Impala 50k"
+      ],
+      "EXPECTED": [
+        {"make": "chevrolet,cadillac","model": "impala%7C","year": "2018","odometer": "50000"}
+      ],
+      "SEARCH_NOTE":""
+    }
+  ,
+    {
+      "ACTUAL":[
+        "Chevy impala 2018 50k"
+      ],
+      "EXPECTED": [
+        {"make": "chevrolet","model": "impala","year": "2018","odometer": "50000"}
+      ],
+      "SEARCH_NOTE":""
+    },
+    {
+      "ACTUAL":[
+        "honda civic 18 4wd automatic"
+      ],
+      "EXPECTED": [
+        {"make": "honda","model": "civic","year": "2018","drivetrain": "4wd","transmission": "automatic"}
+      ],
+      "SEARCH_NOTE":""
+    },
+    {
+        "ACTUAL":[
+          "adesa indianapolis"
+        ],
+        "EXPECTED": [
+            {"processingLocation": "adesa indianapolis"}
+        ],
+        "SEARCH_NOTE":""
+      }
+  ]
+  

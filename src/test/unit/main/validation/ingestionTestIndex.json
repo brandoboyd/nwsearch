@@ -1,0 +1,23 @@
+[
+  {
+    "ACTUAL_FILE": "../../resources/cleanse/actual/quicktest.json",
+    "EXPECTED_FILE": "../../resources/cleanse/expected/quicktest.json",
+    "TEST_FIELDS": [
+      "vin",
+      "make",
+      "model",
+      "year",
+      "odometer",
+      "exteriorColor",
+      "interiorColor",
+      "driveTrain",
+      "transmission",
+      "engine_name",
+      "trim",
+      "countryCode",
+      "bodyType",
+      "processingLocation"
+    ]
+  }
+]
+

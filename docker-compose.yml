@@ -1,0 +1,9 @@
+version: '3'
+services:
+  unittest:
+    image: 854045450972.dkr.ecr.us-east-1.amazonaws.com/node:latest
+    user: node
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: /bin/sh -c 'npm install && npm run dev:test:unit'

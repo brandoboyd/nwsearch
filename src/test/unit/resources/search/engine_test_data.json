@@ -1,0 +1,32 @@
+[
+  {
+    "ACTUAL": ["06 CYLINDER 3 LITER TURBO GAS"],
+    "EXPECTED": "engineName:6 Cylinder Turbo",
+    "SEARCH_NOTE": "Test for engineName 06 CYLINDER 3 LITER TURBO GAS"
+  },
+  {
+    "ACTUAL": ["1 0.5L Hybrid Diesel"],
+    "EXPECTED": "engineName:2 cylinder diesel gas/electric hybrid",
+    "SEARCH_NOTE": "Test for engineName 1 0.5L Hybrid Diesel"
+  },
+  {
+    "ACTUAL": ["1.3 LITER HYBRID"],
+    "EXPECTED": "engineName:4 Cylinder",
+    "SEARCH_NOTE": "Test for engineName 1.3 LITER HYBRID"
+  },
+  {
+    "ACTUAL": ["1.5 LITER  TURBO Gas"],
+    "EXPECTED": "engineName:4 Cylinder Turbo",
+    "SEARCH_NOTE": "Test for engineName 1.5 LITER  TURBO Gas"
+  },
+  {
+    "ACTUAL": ["0 CYLINDER 0 LITER Electric TURBO"],
+    "EXPECTED": "engineName:Electric Turbo",
+    "SEARCH_NOTE": "Test for engineName 0 CYLINDER 0 LITER Electric TURBO"
+  },
+  {
+    "ACTUAL": ["3.7L-6L (range)"],
+    "EXPECTED": "engineName:8 Cylinder",
+    "SEARCH_NOTE": "Test for engineName 0 CYLINDER 3.7L-6L (range)"
+  }
+]
